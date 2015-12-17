@@ -18,9 +18,9 @@ Go to input.txt and add the line "aa 3" at the very top. That is anti aliasing u
 <br>
 Ok, now in honor of Stanford, let's make this red.
 <br>
-In input.txt, replace "mat   1 0.1 0.1   .1 .1 .1   1 1 1   64   0.0 0.0 0.0"
+In input.txt, replace mat__1 0.1 0.1     .1 .1 .1      1 1 1     64     0.0 0.0 0.0
 <br>
-with mat   1 0.1 0.1   .8 .1 .1   1 1 1   64   0.0 0.0 0.0.
+with "mat   1 0.1 0.1      .8 .1 .1      1 1 1     64     0.0 0.0 0.0."
 <br>
 So you've toggled with the RGB values...made R channel 8x louder. Result:
 <br>

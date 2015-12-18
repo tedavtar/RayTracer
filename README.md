@@ -25,3 +25,15 @@ So you've toggled with the RGB values...made R channel 8x louder + antialiased. 
 <img src="https://dl.dropboxusercontent.com/u/105935968/raytracerImages/scene.jpg" alt="orignal"> 
 <br>
 The jagged edges are removed, much cleaner now!
+<br>
+If you are feeling particularly sadistic and want to heat your computer, try rendering "campanile.obj"
+For ex. doing: <br>
+xfr 0 70 0<br>
+xfs 2.3 2.5 2.3<br>
+xft 0 -1.5 0<br>
+cam   0 0 30 -3 -5 1 3 -5 1 -3 5 1 3 5 1<br>
+mat   0.1 0.1 0.1   .8 .8 .8   1 1 1   64   0.8 0.8 0.8<br>
+ltd   0 0 -1  1 1 1    0<br>
+obj campanile.obj<br>
+And letting that run for a couple hours resulted in: <br>
+<img src="https://dl.dropboxusercontent.com/u/105935968/raytracerImages/Campanile.png" alt="orignal"> 

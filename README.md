@@ -47,4 +47,4 @@ Transformations: xf? where ?="r" means rotate, "s" scale, "t" means translate. <
 Ex. xft 2 1 1 will stretch out all objects below in the X direction by a factor of 2.
 mat kar kag kab kdr kdg kdb ksr ksg ksb ksp krr krg krb specifies an object's material: <br>
 Let ? be an R,G,B. ka? is ambient coeffs, ks for specular, kd for diffuse, ksp for the specular coefficient, and my favorite, kr? which handles reflections <br>
-Lights: 
+Of course, due to the recursive nature of reflection, enter "depth X" to specify how many levels of reflection to truncate at for base case.

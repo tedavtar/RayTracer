@@ -37,3 +37,14 @@ ltd   0 0 -1  1 1 1    0<br>
 obj campanile.obj<br>
 And letting that run for a couple hours resulted in: <br>
 <img src="https://dl.dropboxusercontent.com/u/105935968/raytracerImages/Campanile.png" alt="orignal"> 
+<br>
+Note to self: maybe do like an AABB or some optimizations...
+<br>
+Ok, so what do all the directives even mean?<br>
+Just play around to learn what they do...the list of them can be found at the bottom (parsing code) of "TRayTracer.cpp"! <br>
+Note, these transformations accumulate (namely, they matrix multiply) so to transform one object, not the rest, got to apply inverse <br>
+Transformations: xf? where ?="r" means rotate, "s" scale, "t" means translate. <br>
+Ex. xft 2 1 1 will stretch out all objects below in the X direction by a factor of 2.
+mat kar kag kab kdr kdg kdb ksr ksg ksb ksp krr krg krb specifies an object's material: <br>
+Let ? be an R,G,B. ka? is ambient coeffs, ks for specular, kd for diffuse, ksp for the specular coefficient, and my favorite, kr? which handles reflections <br>
+Lights: 

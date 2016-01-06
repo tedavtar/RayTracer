@@ -48,3 +48,34 @@ Ex. xft 2 1 1 will stretch out all objects below in the X direction by a factor 
 mat kar kag kab kdr kdg kdb ksr ksg ksb ksp krr krg krb specifies an object's material: <br>
 Let ? be an R,G,B. ka? is ambient coeffs, ks for specular, kd for diffuse, ksp for the specular coefficient, and my favorite, kr? which handles reflections <br>
 Of course, due to the recursive nature of reflection, enter "depth X" to specify how many levels of reflection to truncate at for base case.
+<br>
+Let's do a demo of this reflection using tris for octhedron reflected across a mirror.  Credit to this is to a Mr. Baruch in my graphics class:
+<br>
+Paste in these lines for input.txt: "depth 1<br>
+aa 3<br>
+
+
+cam   0 0 2   -1 -1 1   1 -1 1   -1 1 1   1 1 1<br>
+mat   0.1 0.1 0.1   1 0 0   0 1 0   64   0.8 0.8 0.8<br>
+
+ltp   -4 1 -1.9   1 1 1    0<br>
+lta   1 1 1<br>
+
+xft 1 0 0<br>
+xfr 20 0 0<br>
+obj octahedron_1.obj<br>
+
+xfz<br>
+
+mat 0.1 0.1 0.1   0.2 0.2 0.2    0.2 0.2 0.2    64   0.8 0.8 0.8<br>
+tri 4 4 -5   -4 4 -2  -4 -4 -2<br>
+tri 4 4 -5   -4 -4 -2   4 -4 -5"<br>
+(remove the quotes of course) and here's the result:
+<br>
+<img src="https://dl.dropboxusercontent.com/u/105935968/raytracerImages/scene(1).jpg" alt="orignal"> 
+<br>
+Note that this is depth 1 reflection. Now replace the first line to depth 2 and here's what you'll see:
+<br>
+<img src="https://dl.dropboxusercontent.com/u/105935968/raytracerImages/scene2.jpg" alt="orignal"> 
+<br>
+Play close attention to the octahedron reflection in the mirror compared to the previous image above! It has an additional reflection of the plane itself!
